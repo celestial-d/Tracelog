@@ -1,1 +1,2 @@
 # Tracelog
+Some FTrace log
