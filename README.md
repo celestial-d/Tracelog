@@ -1,13 +1,15 @@
 # Tracelog
-Some FTrace log
+Some FTrace logs
 
-#how to run FTrace
-
+## How to run FTrace?
+### method 1
 debugfs=/sys/kernel/debug
 echo nop > $debugfs/tracing/current_tracer
 echo 0 > $debugfs/tracing/tracing_on
+
 #echo $$ > $debugfs/tracing/set_ftrace_pid
 echo function_graph > $debugfs/tracing/current_tracer
+
 #replace test_proc_show by your function name
 #echo finish_task_switch > $debugfs/tracing/set_graph_function
 echo > $debugfs/tracing/set_graph_function 
@@ -29,4 +31,5 @@ echo 1 > $debugfs/tracing/tracing_on
 #echo "begin cat"
 #cat /sys/kernel/debug/tracing/trace > local.txt
 
-#second method:trace-cmd
+### method 2
+run trace-cmd
